@@ -9,6 +9,10 @@
     width:140px;
 }
 
+.hero{
+    display:flex;
+}
+
 nav ul li{
     list-style: none;
     margin: 10px 15px;
