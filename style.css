@@ -1,6 +1,21 @@
 ﻿body{
     background-color: black;
 }
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100px;
+    background-color: #153548;
+    align-items: center;
+}
+
+.header div {
+    width: 300px;
+}
+
 .container{
     margin: 100px 0 0 200px;
     width: 70%;
