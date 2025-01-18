@@ -1,19 +1,9 @@
 ﻿body{
-    background-color: black;
+    background-color: white;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
+.navbar-nav{
     flex-wrap: wrap;
-    justify-content: center;
-    height: 100px;
-    background-color: #153548;
-    align-items: center;
-}
-
-.header div {
-    width: 300px;
 }
 
 .container{
