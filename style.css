@@ -1,5 +1,5 @@
 ﻿body{
-    background-color: white;
+    background-color: black;
 }
 
 .navbar{
@@ -35,6 +35,12 @@
 .nav-item {
     font-size: medium;
 }
+.container a {
+    display: inline-block;
+    width: 10%; 
+    height: 100%; 
+    text-decoration: none;
+} 
 
 .music-img{
     background-color: black;
