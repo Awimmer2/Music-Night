@@ -164,7 +164,7 @@
     color: black;
 }
 
-.about{
+#about{
     display: flex;
     align-items:center;
     justify-content: center;
@@ -190,7 +190,7 @@
     font-size: 250;
 }
 
-.about{
+#about{
     color: white;
 }
 
