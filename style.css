@@ -148,9 +148,20 @@
     animation-timeline: view();
     animation-range: entry 0% cover 40%; 
     text-align: center;
+
+}
+
+.genre-link{
+    color: black;
     line-height: 190px;
     font-weight: 900;
     font-size: x-large;
+    text-decoration: none;
 }
+
+.genre-link:hover, .genre-link:active {
+    text-decoration: underline;
+    color: black;
+  }
 
 /* #1A545D #4E9A8D #153548 #9AE8B7 */
