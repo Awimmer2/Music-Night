@@ -136,7 +136,11 @@
 .block {
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 40%; 
+    text-align: center;
+    line-height: 190px;
+    font-weight: 900;
+    font-size: x-large;
 }
 
 /* #1A545D #4E9A8D #153548 #9AE8B7 */
