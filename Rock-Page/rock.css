@@ -55,7 +55,8 @@ section ::after {
     z-index: -1;
 }
 
-h1 {
+.title{
+    
     color: white;
     z-index: 1;
 }
