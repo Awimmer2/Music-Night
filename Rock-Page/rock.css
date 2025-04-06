@@ -60,3 +60,52 @@ section ::after {
     color: white;
     z-index: 1;
 }
+
+#about{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #272828;
+    height: 775px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.brand-text{
+    letter-spacing: 10px;
+    padding: 15px;
+    background-color: #1A545D;
+    color: white;
+    margin-right: 20px;
+    writing-mode: sideways-lr;
+    text-align: center;
+    font-weight: 900;
+    font-size: 250;
+}
+
+#about{
+    color: white;
+}
+
+.content{
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+  
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
