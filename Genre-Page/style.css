@@ -253,4 +253,7 @@ body.light-mode {
   body.light-mode .block:nth-child(9) {
     border: 2px solid #ddd;
   }
+  * {
+    transition: background-color 0.8s ease, color 0.8s ease;
+  }
   
