@@ -1,18 +1,21 @@
-body{
+body {
     background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-.navbar{
+.navbar {
     background-color: #1A545D;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-weight: 900;
     font-size: x-large;
 }
 
 .nav-link {
     position: relative;
+    color: white !important;
 }
 
 .nav-link::after {
@@ -29,9 +32,27 @@ body{
 
 .nav-link:hover::after {
     opacity: 1;
-    
 }
 
 .nav-item {
     font-size: medium;
+}
+
+.section-pop {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-pop h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #9AE8B7;
+}
+
+.section-pop p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
