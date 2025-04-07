@@ -1,6 +1,6 @@
 body {
-    background-color: black;
-  }
+  background-color: black;
+}
 .navbar {
     background-color: #1A545D;
   }
@@ -29,7 +29,7 @@ body {
     font-size: medium;
   }
   
-  /* Hero Section */
+  /* Hero  */
   .hero-section {
     height: 100vh;
     background: url("../images/kurt.jpeg") no-repeat center center/cover;
@@ -49,7 +49,7 @@ body {
     text-align: center;
   }
   
-  /* Rock Info Section */
+  /* Rock  */
   .rock-info {
     background-color: #1b1b1b;
     color: white;
@@ -71,7 +71,7 @@ body {
     margin-bottom: 20px;
   }
   
-  /* About Section */
+  /* About  */
   #about {
     display: flex;
     align-items: center;
