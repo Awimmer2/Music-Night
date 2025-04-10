@@ -1,18 +1,17 @@
-
-.navbar{
-    background-color: #1A545D;
+body {
+  background-color: black;
 }
-
-.navbar-brand{
+.navbar {
+    background-color: #1A545D;
+  }
+  .navbar-brand {
     font-weight: 900;
     font-size: x-large;
-}
-
-.nav-link {
+  }
+  .nav-link {
     position: relative;
-}
-
-.nav-link::after {
+  }
+  .nav-link::after {
     content: '';
     opacity: 0;
     transition: all 0.2s;
@@ -22,90 +21,92 @@
     position: absolute;
     bottom: 0;
     left: 0;
-}
-
-.nav-link:hover::after {
+  }
+  .nav-link:hover::after {
     opacity: 1;
-    
-}
-
-.nav-item {
+  }
+  .nav-item {
     font-size: medium;
-}
-
-section {
-    margin: 0;
+  }
+  
+  /* Hero  */
+  .hero-section {
     height: 100vh;
+    background: url("../images/kurt.jpeg") no-repeat center center/cover;
+    position: relative;
+  }
+  .hero-section .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../images/kurt.jpeg") no-repeat center center/cover;
-    filter: drop-shadow(8px 8px 10px gray);
-    position: relative;
-}
-
-section ::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: -1;
-}
-
-.title{
-    
+  }
+  .hero-title {
     color: white;
-    z-index: 1;
-}
-
-#about{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Rock  */
+  .rock-info {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+  .rock-info h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9AE8B7;
+  }
+  .rock-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* About  */
+  #about {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     padding: 10px;
     background-color: #272828;
-    height: 775px;
-}
-.box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-}
-.brand-text{
+    color: white;
+  }
+  .brand {
+    margin-right: 20px;
+  }
+  .brand-text {
     letter-spacing: 10px;
     padding: 15px;
     background-color: #1A545D;
     color: white;
-    margin-right: 20px;
     writing-mode: sideways-lr;
     text-align: center;
     font-weight: 900;
     font-size: 250;
-}
-
-#about{
-    color: white;
-}
-
-.content{
+  }
+  .content {
     flex: 2;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-h2 {
+  }
+  h2 {
     font-size: 36px;
     margin-bottom: 20px;
-}
-  
-p {
+  }
+  p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 40px;
-}
+  }
+  
