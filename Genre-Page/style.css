@@ -13,6 +13,7 @@
 
 .nav-link {
     position: relative;
+    color: white !important
 }
 
 .nav-link::after {
@@ -41,6 +42,8 @@
     height: 100%; 
     text-decoration: none;
 } 
+
+/* images */
 
 .music-img{
     background-color: black;
@@ -79,7 +82,8 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-  
+
+/* Genre Blocks */
 .block {
     height: 200px;
     width: 400px;
@@ -164,6 +168,8 @@
     color: black;
 }
 
+/* About Us */
+
 #about{
     display: flex;
     align-items:center;
@@ -214,6 +220,7 @@ p {
 }
 
 /* #1A545D #4E9A8D #153548 #9AE8B7 */
+
 /* LIGHT MODE STYLES */
 body.light-mode {
     background-color: white;
