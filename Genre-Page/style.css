@@ -13,37 +13,21 @@
 
 .nav-link {
     position: relative;
-    color: white !important
-}
-
-.nav-link::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: #9AE8B7;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    opacity: 1;
-    
+    color: white;
 }
 
 .nav-item {
     font-size: medium;
 }
+
+/* images */
+
 .container a {
     display: inline-block;
     width: 10%; 
     height: 100%; 
     text-decoration: none;
 } 
-
-/* images */
 
 .music-img{
     background-color: black;
@@ -224,7 +208,7 @@ p {
 /* LIGHT MODE STYLES */
 body.light-mode {
     background-color: white;
-    color: black;
+    color:black
   }
   
   body.light-mode .navbar {
@@ -238,7 +222,7 @@ body.light-mode {
   
   body.light-mode .brand-text {
     background-color: #0d6efd;
-    color: white;
+    color: black;
   }
   
   body.light-mode .genre-link {
