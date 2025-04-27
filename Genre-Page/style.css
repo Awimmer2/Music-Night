@@ -6,7 +6,7 @@
     background-color: #1A545D;
 }
 
-.navbar-brand{
+.navbar .navbar-brand{
     font-weight: 900;
     font-size: x-large;
     color: white;
@@ -18,6 +18,9 @@
 
 .navbar .nav-link:hover {
     color: white;
+    text-decoration: underline;
+    text-decoration-color: #4E9A8D;
+    text-underline-offset: 10px;
 }
 
 .nav-link {
