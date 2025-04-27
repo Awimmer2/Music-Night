@@ -101,7 +101,37 @@ body.light-mode .block:nth-child(8),
 body.light-mode .block:nth-child(9) {
     border: 2px solid #ddd;
 }
- * {
+body {
+    background-color: black;
+    color: white;
+}
+
+.section-pop {
+    background-color: black;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+body.light-mode .section-pop {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+body.light-mode .section-pop h1 {
+    color: #0d6efd;
+}
+
+body.light-mode #theme-toggle {
+    background-color: #0d6efd;
+    color: white;
+}
+
+* {
     transition: background-color 0.8s ease, color 0.8s ease;
 }
-  
+
+
