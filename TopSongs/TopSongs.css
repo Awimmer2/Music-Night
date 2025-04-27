@@ -36,63 +36,92 @@ body{
 
 /* Song Table */
 
-.songs-list{
+.songs-list {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     padding: 10px;
     background-color: #272828;
     height: 775px;
-    color: black
-}
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
-*{
- margin:0;
- padding: 0;
- outline: 0;
-}
-
-table{
- position: absolute;
- z-index: 2;
- left: 50%;
- top: 50%;
- transform: translate(-50%,-50%);
- width: 60%; 
- border-collapse: collapse;
- border-spacing: 0;
- box-shadow: 0 2px 15px rgba(64,64,64,.7);
- border-radius: 12px 12px 0 0;
- overflow: hidden;
-
-}
-td , th{
- padding: 15px 20px;
- text-align: center;
- 
-
-}
-th{
- background-color: #7fcfdb;
- color: #fafafa;
- font-family: 'Open Sans',Sans-serif;
- font-weight: 200;
- text-transform: uppercase;
-
-}
-tr{
- width: 100%;
- background-color: #fafafa;
- font-family: 'Montserrat', sans-serif;
-}
-tr:nth-child(even){
- background-color: #eeeeee;
-}
-
-tr .song{
+    color: black;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* makes sure the image stays neat */
+  }
+  
+  .album-cover {
+    text-align: center;
+    padding: 0;
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  
+  table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    border-collapse: collapse;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+  }
+  
+  thead th {
+    background-color: #7fcfdb;
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 15px 20px;
+  }
+  
+  tbody td {
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+  
+  td.song {
     text-align: left;
-}
+  }
+  
+  /* Specific column widths */
+  thead th:nth-child(1),
+  thead th:nth-child(4),
+  thead th:nth-child(5),
+  tbody td:nth-child(1),
+  tbody td:nth-child(4),
+  tbody td:nth-child(5) {
+    width: 100px;
+  }
+  
+  thead th:nth-child(2),
+  tbody td:nth-child(2) {
+    width: 150px;
+  }
+  
+  thead th:nth-child(3),
+  tbody td:nth-child(3) {
+    width: auto;
+  }
 
 /* About Us */
 
