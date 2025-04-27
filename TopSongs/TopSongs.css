@@ -96,7 +96,6 @@ body{
     text-align: left;
   }
   
-  /* Specific column widths */
   thead th:nth-child(1),
   thead th:nth-child(4),
   thead th:nth-child(5),
@@ -206,9 +205,30 @@ body.light-mode .genre-link {
 }
   
 body.light-mode .genre-link:hover {
-    color: #0d6efd;
+    color: #7fcfdb;
 }
 
+body.light-mode thead th{
+    background-color: #7fcfdb;
+    color: black;
+}
+
+body.light-mode .songs-list{
+    background-color: white;
+    color: black;
+}
+  
+body.light-mode .block:nth-child(1),
+body.light-mode .block:nth-child(2),
+body.light-mode .block:nth-child(3),
+body.light-mode .block:nth-child(4),
+body.light-mode .block:nth-child(5),
+body.light-mode .block:nth-child(6),
+body.light-mode .block:nth-child(7),
+body.light-mode .block:nth-child(8),
+body.light-mode .block:nth-child(9) {
+    border: 2px solid #ddd;
+}
  * {
     transition: background-color 0.8s ease, color 0.8s ease;
 }

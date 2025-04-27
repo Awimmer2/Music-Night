@@ -245,7 +245,7 @@ body.light-mode #about {
 }
   
 body.light-mode .brand-text {
-    background-color: #0d6efd;
+    background-color: #7fcfdb;
     color: black;
 }
   
@@ -254,7 +254,7 @@ body.light-mode .genre-link {
 }
   
 body.light-mode .genre-link:hover {
-    color: #0d6efd;
+    color: #7fcfdb;
 }
   
 body.light-mode .block:nth-child(1),
