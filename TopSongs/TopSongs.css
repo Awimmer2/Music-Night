@@ -57,15 +57,6 @@ body{
     padding: 0;
   }
   
-  @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
-  }
-  
   table {
     position: absolute;
     z-index: 2;
@@ -86,11 +77,12 @@ body{
     font-weight: 200;
     text-transform: uppercase;
     padding: 15px 20px;
+    text-align: center;
+    position: sticky;
   }
   
   tbody td {
     background-color: #fafafa;
-    font-family: 'Montserrat', sans-serif;
     padding: 15px 20px;
     text-align: center;
   }
