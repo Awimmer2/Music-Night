@@ -50,7 +50,7 @@
 }
 
 .container-genre-img{
-    margin: 60px 200px 100px 180px;
+    margin: 60px auto 100px auto;
     width: 70%;
     height: 450px;
     display: flex;
@@ -224,7 +224,7 @@ body.light-mode {
 }
   
 body.light-mode .navbar {
-    background-color: #e3f2fd;
+    background-color: #7fcfdb;
 }
 
 body.light-mode .navbar .navbar-brand{
