@@ -42,7 +42,7 @@ body{
     justify-content: center;
     padding: 10px;
     background-color: #272828;
-    height: 775px;
+    height: 1800px;
     color: black;
   }
   
@@ -61,9 +61,9 @@ body{
     position: absolute;
     z-index: 2;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%; 
+    top: 100%;
+    transform: translate(-50%, -30%);
+    width: 60%; 
     border-collapse: collapse;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
     border-radius: 12px 12px 0 0;
@@ -71,7 +71,7 @@ body{
   }
   
   thead th {
-    background-color: #7fcfdb;
+    background-color: #1A545D;
     color: #fafafa;
     font-family: 'Open Sans', Sans-serif;
     font-weight: 200;
@@ -79,6 +79,7 @@ body{
     padding: 15px 20px;
     text-align: center;
     position: sticky;
+    top: 0;
   }
   
   tbody td {
