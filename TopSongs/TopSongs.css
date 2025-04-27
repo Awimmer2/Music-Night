@@ -41,8 +41,8 @@ body{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: #272828;
-    height: 1800px;
+    background-color: black;
+    height: 1900px;
     color: black;
   }
   
@@ -83,7 +83,7 @@ body{
   }
   
   tbody td {
-    background-color: #fafafa;
+    background-color: #d4d3d6;
     padding: 15px 20px;
     text-align: center;
   }
