@@ -1,22 +1,17 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Load saved theme from localStorage
+
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark-mode');
-} else {
-  body.classList.add('light-mode');
 }
 
-// Button click
 themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
   if (body.classList.contains('dark-mode')) {
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-    localStorage.setItem('theme', 'light');
-  } else {
-    body.classList.remove('light-mode');
-    body.classList.add('dark-mode');
     localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
   }
 });
