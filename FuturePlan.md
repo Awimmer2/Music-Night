@@ -10,10 +10,10 @@
 - Allowing users to leave simple ratings or comments on songs/albums. 
 
 ## 4. Implement Top Songs Weekly
-- Just shows Top 10 Songs of that week globally.
+- Just shows Top 10 or 20 Songs of that week globally. We want to fetch the songs from spotify or any other music streaming app later on for easier implementation.
 
 ## 5. Playlists for different occasions
 - Making playlists that fit the right mood
 
 ## 6. Song Recommendation
-- Recommends the user songs of the specific genre they would like. 
+- Recommends the user songs of the specific genre they would like.
