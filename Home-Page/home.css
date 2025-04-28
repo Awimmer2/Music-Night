@@ -4,38 +4,35 @@ body{
 
 .navbar{
     background-color: #1A545D;
-    color: white
 }
 
-.navbar-brand{
+.navbar .navbar-brand{
     font-weight: 900;
     font-size: x-large;
+    color: white;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #4E9A8D;
+    text-underline-offset: 10px;
 }
 
 .nav-link {
     position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: #9AE8B7;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    opacity: 1;
-    
+    color: white;
 }
 
 .nav-item {
     font-size: medium;
 }
+
+/* About Us */
 
 #about{
     display: flex;
@@ -87,3 +84,58 @@ p {
 }
 
 /* #1A545D #4E9A8D #153548 #9AE8B7 */
+
+/* LIGHT MODE STYLES */
+body.light-mode {
+    background-color: white;
+    color:black;
+}
+  
+body.light-mode .navbar {
+    background-color: #7fcfdb;
+}
+
+body.light-mode .navbar .navbar-brand{
+    color:black;
+}
+  
+body.light-mode .navbar .nav-link {
+    color: black;
+}
+    
+body.light-mode .navbar .nav-link:hover {
+    color: black;
+}
+
+body.light-mode #about {
+    background-color: #f5f5f5;
+    color: black;
+}
+  
+body.light-mode .brand-text {
+    background-color: #7fcfdb;
+    color: black;
+}
+  
+body.light-mode .genre-link {
+    color: black;
+}
+  
+body.light-mode .genre-link:hover {
+    color: #7fcfdb;
+}
+  
+body.light-mode .block:nth-child(1),
+body.light-mode .block:nth-child(2),
+body.light-mode .block:nth-child(3),
+body.light-mode .block:nth-child(4),
+body.light-mode .block:nth-child(5),
+body.light-mode .block:nth-child(6),
+body.light-mode .block:nth-child(7),
+body.light-mode .block:nth-child(8),
+body.light-mode .block:nth-child(9) {
+    border: 2px solid #ddd;
+}
+ * {
+    transition: background-color 0.8s ease, color 0.8s ease;
+}

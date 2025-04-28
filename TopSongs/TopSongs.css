@@ -1,39 +1,234 @@
-body {
+body{
     background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
 }
 
-.navbar {
+/* navbar */
+
+.navbar{
     background-color: #1A545D;
 }
 
-.navbar-brand {
+.navbar .navbar-brand{
     font-weight: 900;
     font-size: x-large;
+    color: white;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #4E9A8D;
+    text-underline-offset: 10px;
 }
 
 .nav-link {
     position: relative;
-    color: white !important;
-}
-
-.nav-link::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: #9AE8B7;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    opacity: 1;
+    color: white;
 }
 
 .nav-item {
     font-size: medium;
+}
+
+/* Song Table */
+
+.songs-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
+    height: 1900px;
+    color: black;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* makes sure the image stays neat */
+  }
+  
+  .album-cover {
+    text-align: center;
+    padding: 0;
+  }
+  
+  table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -30%);
+    width: 60%; 
+    border-collapse: collapse;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+  }
+  
+  thead th {
+    background-color: #1A545D;
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+  }
+  
+  tbody td {
+    background-color: #d4d3d6;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+  
+  td.song {
+    text-align: left;
+  }
+  
+  thead th:nth-child(1),
+  thead th:nth-child(4),
+  thead th:nth-child(5),
+  tbody td:nth-child(1),
+  tbody td:nth-child(4),
+  tbody td:nth-child(5) {
+    width: 100px;
+  }
+  
+  thead th:nth-child(2),
+  tbody td:nth-child(2) {
+    width: 150px;
+  }
+  
+  thead th:nth-child(3),
+  tbody td:nth-child(3) {
+    width: auto;
+  }
+
+/* About Us */
+
+#about{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #272828;
+    height: 775px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.brand-text{
+    letter-spacing: 10px;
+    padding: 15px;
+    background-color: #1A545D;
+    color: white;
+    margin-right: 20px;
+    writing-mode: sideways-lr;
+    text-align: center;
+    font-weight: 900;
+    font-size: 250;
+}
+
+#about{
+    color: white;
+}
+
+.content{
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+  
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* #1A545D #4E9A8D #153548 #9AE8B7 */
+
+/* LIGHT MODE STYLES */
+body.light-mode {
+    background-color: white;
+    color:black;
+}
+  
+body.light-mode .navbar {
+    background-color: #7fcfdb;
+}
+
+body.light-mode .navbar .navbar-brand{
+    color:black;
+}
+  
+body.light-mode .navbar .nav-link {
+    color: black;
+}
+    
+body.light-mode .navbar .nav-link:hover {
+    color: black;
+}
+
+body.light-mode #about {
+    background-color: #f5f5f5;
+    color: black;
+}
+  
+body.light-mode .brand-text {
+    background-color: #7fcfdb;
+    color: black;
+}
+  
+body.light-mode .genre-link {
+    color: black;
+}
+  
+body.light-mode .genre-link:hover {
+    color: #7fcfdb;
+}
+
+body.light-mode thead th{
+    background-color: #7fcfdb;
+    color: black;
+}
+
+body.light-mode .songs-list{
+    background-color: white;
+    color: black;
+}
+  
+body.light-mode .block:nth-child(1),
+body.light-mode .block:nth-child(2),
+body.light-mode .block:nth-child(3),
+body.light-mode .block:nth-child(4),
+body.light-mode .block:nth-child(5),
+body.light-mode .block:nth-child(6),
+body.light-mode .block:nth-child(7),
+body.light-mode .block:nth-child(8),
+body.light-mode .block:nth-child(9) {
+    border: 2px solid #ddd;
+}
+ * {
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
