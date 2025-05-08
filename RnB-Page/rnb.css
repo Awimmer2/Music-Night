@@ -6,32 +6,193 @@ body{
     background-color: #1A545D;
 }
 
-.navbar-brand{
+.navbar .navbar-brand{
     font-weight: 900;
     font-size: x-large;
+    color: white;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #4E9A8D;
+    text-underline-offset: 10px;
 }
 
 .nav-link {
     position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: #9AE8B7;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    opacity: 1;
-    
+    color: white;
 }
 
 .nav-item {
     font-size: medium;
+}
+
+/*Footer*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+/* #1A545D #4E9A8D #153548 #9AE8B7 */
+
+/* LIGHT MODE STYLES */
+body.light-mode {
+    background-color: white;
+    color:black;
+}
+  
+body.light-mode .navbar {
+    background-color: #7fcfdb;
+}
+
+body.light-mode .navbar .navbar-brand{
+    color:black;
+}
+  
+body.light-mode .navbar .nav-link {
+    color: black;
+}
+    
+body.light-mode .navbar .nav-link:hover {
+    color: black;
+}
+  
+/* FOOTER */
+ 
+body.light-mode footer{
+    background-color: #f7f7f7;
+}
+
+body.light-mode .socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: #111;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+body.light-mode .socialIcons a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0,9;
+}
+
+body.light-mode .socialIcons a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+body.light-mode .socialIcons a:hover i{
+    color: black;
+    transition: 0.5s;
+}
+
+body.light-mode .footerNav ul li a{
+    color:black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+
+body.light-mode .footerBottom{
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+}
+body.light-mode .footerBottom p{
+    color: black;
+}
+
+ * {
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
