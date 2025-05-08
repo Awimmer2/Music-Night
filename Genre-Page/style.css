@@ -164,58 +164,6 @@
     color: black;
 }
 
-/* About Us 
-
-#about{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #272828;
-    height: 775px;
-}
-.box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-}
-.brand-text{
-    letter-spacing: 10px;
-    padding: 15px;
-    background-color: #1A545D;
-    color: white;
-    margin-right: 20px;
-    writing-mode: sideways-lr;
-    text-align: center;
-    font-weight: 900;
-    font-size: 250;
-}
-
-#about{
-    color: white;
-}
-
-.content{
-    flex: 2;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-  
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-*/
-
 /*Footer*/
 
 *{
@@ -246,7 +194,7 @@ footer{
     color: black;
     opacity: 0,9;
 }
-/* Hover affect on social media icon */
+
 .socialIcons a:hover{
     background-color: #111;
     transition: 0.5s;
@@ -313,6 +261,8 @@ body.light-mode {
     background-color: white;
     color:black;
 }
+
+/* NAVBAR */
   
 body.light-mode .navbar {
     background-color: #7fcfdb;
@@ -330,15 +280,7 @@ body.light-mode .navbar .nav-link:hover {
     color: black;
 }
 
-body.light-mode #about {
-    background-color: #f5f5f5;
-    color: black;
-}
-  
-body.light-mode .brand-text {
-    background-color: #7fcfdb;
-    color: black;
-}
+/* GENRE BLOCKS */
   
 body.light-mode .genre-link {
     color: black;
@@ -392,7 +334,55 @@ body.light-mode .block:nth-child(9) {
     background: #7fcfdb;
     border-radius: 10px;
 }
+
+/* FOOTER */
  
+body.light-mode footer{
+    background-color: white;
+}
+
+body.light-mode .socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: #111;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+body.light-mode .socialIcons a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0,9;
+}
+
+body.light-mode .socialIcons a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+body.light-mode .socialIcons a:hover i{
+    color: black;
+    transition: 0.5s;
+}
+
+body.light-mode .footerNav ul li a{
+    color:black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+
+body.light-mode .footerBottom{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+body.light-mode .footerBottom p{
+    color: black;
+}
+
 body.light-mode footer{
     background-color: white;
 }
