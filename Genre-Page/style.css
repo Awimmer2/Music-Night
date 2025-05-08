@@ -257,16 +257,49 @@ body.light-mode .genre-link:hover {
     color: #7fcfdb;
 }
   
-body.light-mode .block:nth-child(1),
-body.light-mode .block:nth-child(2),
-body.light-mode .block:nth-child(3),
-body.light-mode .block:nth-child(4),
-body.light-mode .block:nth-child(5),
-body.light-mode .block:nth-child(6),
-body.light-mode .block:nth-child(7),
-body.light-mode .block:nth-child(8),
+body.light-mode .block:nth-child(1) {
+    background: #c9f3d9;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(2) {
+    background: #84c1b6;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(3) {
+    background: #84bbdb;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(4) {
+    background: #7fcfdb;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(5) {
+    background: #84bbdb;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(6) {
+    background: #c9f3d9;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(7) {
+    background: #84c1b6;
+    border-radius: 10px;
+}
+
+body.light-mode .block:nth-child(8) {
+    background: #c9f3d9;
+    border-radius: 10px;
+}
+
 body.light-mode .block:nth-child(9) {
-    border: 2px solid #ddd;
+    background: #7fcfdb;
+    border-radius: 10px;
 }
  * {
     transition: background-color 0.8s ease, color 0.8s ease;
