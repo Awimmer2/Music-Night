@@ -40,6 +40,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: white;
     margin: 20px;
     height: 580px;
     display: flex;
@@ -66,11 +67,22 @@ body{
 
 .welcome-btn{
     background-color: transparent;
-    color: black;
-    border: 2px solid black;
+    color: white;
+    border: 2px solid white;
     padding: 10px 26px;
     text-decoration: none;
     margin-top: 20px;
+}
+
+/*Subheading*/
+
+.subheading{
+    color: white;
+}
+
+#problem1, #problem2, #help1, #help2{
+    display: flex;
+    justify-content: center;
 }
 
 /*Footer*/
@@ -188,6 +200,33 @@ body.light-mode .navbar .nav-link {
     
 body.light-mode .navbar .nav-link:hover {
     color: black;
+}
+
+/*Welcome*/
+
+body.light-mode .welcome{
+    background-color: white;
+    background-image: url('https://i.pinimg.com/736x/bf/98/82/bf988223cfcf427df5ce19443523bdf6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+    margin: 20px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body.light-mode .welcome-btn{
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 26px;
+    text-decoration: none;
+    margin-top: 20px;
 }
   
 /* FOOTER */
