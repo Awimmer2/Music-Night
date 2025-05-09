@@ -101,6 +101,20 @@ body{
     font-size: 17px;
 }
 
+/*Features*/
+
+.features{
+    color: white;
+    background-color: #547d94;
+    margin: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 /*Footer*/
 
 *{
@@ -243,6 +257,18 @@ body.light-mode .welcome-btn{
     padding: 10px 26px;
     text-decoration: none;
     margin-top: 20px;
+}
+
+/*Subheading*/
+
+body.light-mode .subheading{
+    color: black;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
   
 /* FOOTER */
