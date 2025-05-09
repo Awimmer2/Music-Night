@@ -36,6 +36,10 @@ body{
 
 .welcome{
     background-color: white;
+    background-image: url('https://i.pinimg.com/736x/bf/98/82/bf988223cfcf427df5ce19443523bdf6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     margin: 20px;
     height: 580px;
     display: flex;
@@ -50,13 +54,18 @@ body{
     justify-content: center;
 }
 
-#content1::after{
-    content: "\a";
-    white-space: pre;
+#content1, #content2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+#message1, #message2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 .welcome-btn{
-    background-color: white;
+    background-color: transparent;
     color: black;
     border: 2px solid black;
     padding: 10px 26px;
