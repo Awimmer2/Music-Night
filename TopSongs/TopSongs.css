@@ -42,7 +42,7 @@ body{
     justify-content: center;
     padding: 10px;
     background-color: black;
-    height: 1900px;
+    height: 3200px;
     color: black;
   }
   
@@ -58,11 +58,8 @@ body{
   }
   
   table {
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -30%);
+    position: relative; /* or remove this entirely */
+    margin: 50px auto; /* centers and adds spacing from navbar */
     width: 60%; 
     border-collapse: collapse;
     box-shadow: 0 2px 15px rgba(64,64,64,.7);
