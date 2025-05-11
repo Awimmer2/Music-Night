@@ -22,22 +22,29 @@ themeToggle.addEventListener('click', () => {
     themeToggle.textContent = 'Light Mode';
   }
 });
-function login() {
-  const username = document.getElementById('username').value;
-  const age = parseInt(document.getElementById('age').value);
-  const password = document.getElementById('password').value;
 
-  fetch('users.json')
-    .then(response => response.json())
-    .then(users => {
-      const user = users.find(u => u.username === username && u.age === age && u.password === password);
-      if (user) {
-        document.getElementById('login-status').innerText = 'Login successful! 🎉';
-      } else {
-        document.getElementById('login-status').innerText = 'Invalid credentials. ❌';
-      }
-    })
-    .catch(error => {
-      console.error('Error loading users.json:', error);
-    });
-}
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const username = document.querySelector('input[type="text"]').value;
+  const password = document.querySelector('input[type="pass"]').value;
+
+  const newUser = { username, password };
+
+  fetch('http://localhost:3000/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log('User saved:', data);
+    alert('User saved to db.json!');
+  })
+  .catch(err => {
+    console.error('Error saving user:', err);
+    alert('Failed to save user.');
+  });
+});
