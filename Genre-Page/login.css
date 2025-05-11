@@ -46,3 +46,28 @@ body {
   pointer-events: none;
   transition: 0.5s;
 }
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: 1px solid #03e9f4;
+  border-radius: 5px;
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+} 
