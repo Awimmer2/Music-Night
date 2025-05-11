@@ -22,3 +22,22 @@ themeToggle.addEventListener('click', () => {
     themeToggle.textContent = 'Light Mode';
   }
 });
+function login() {
+  const username = document.getElementById('username').value;
+  const age = parseInt(document.getElementById('age').value);
+  const password = document.getElementById('password').value;
+
+  fetch('users.json')
+    .then(response => response.json())
+    .then(users => {
+      const user = users.find(u => u.username === username && u.age === age && u.password === password);
+      if (user) {
+        document.getElementById('login-status').innerText = 'Login successful! 🎉';
+      } else {
+        document.getElementById('login-status').innerText = 'Invalid credentials. ❌';
+      }
+    })
+    .catch(error => {
+      console.error('Error loading users.json:', error);
+    });
+}
