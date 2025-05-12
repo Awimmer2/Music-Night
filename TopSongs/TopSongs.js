@@ -1,5 +1,5 @@
-const playlistUrl = "https://v1.nocodeapi.com/ioiaudrey/spotify/bFfHCYXvrMUQEIYy/playlists?id=37i9dQZEVXbMDoHDwVN2tF";
-const tracksUrlBase = "https://v1.nocodeapi.com/ioiaudrey/spotify/bFfHCYXvrMUQEIYy/tracks?ids=";
+const playlistUrl = "https://v1.nocodeapi.com/audiwtvr/spotify/YuebOBqnEKVGhfYO/playlists?id=37i9dQZEVXbMDoHDwVN2tF";
+const tracksUrlBase = "https://v1.nocodeapi.com/audiwtvr/spotify/YuebOBqnEKVGhfYO/tracks?ids=";
 
 async function fetchPlaylist() {
     try {
