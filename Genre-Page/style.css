@@ -287,7 +287,7 @@ body.light-mode .genre-link {
 }
   
 body.light-mode .genre-link:hover {
-    color: #7fcfdb;
+    color: black;
 }
   
 body.light-mode .block:nth-child(1) {

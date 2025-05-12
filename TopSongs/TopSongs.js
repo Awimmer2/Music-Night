@@ -54,8 +54,8 @@ function displayTracks(playlistTracks, detailedTracks) {
               <h3 style="font-size: 35px;">${name}</h3> 
               <span>${artist}</span>
             </td>
-            <td class="popularity" style="font-family: fantasy; font-size: 35px;">${popularity}</td>
-            <td class="release-date" style="font-family: fantasy; font-size: 35px;">${releaseDate}</td>
+            <td class="popularity" style="font-family: 'Montserrat', sans-serif; font-size: 35px; font-weight: bold;">${popularity}</td>
+            <td class="release-date" style="font-family: 'Montserrat', sans-serif; font-size: 35px; font-weight: bold;">${releaseDate}</td>
         `;
         tbody.appendChild(row);
     });

@@ -19,4 +19,4 @@
 - Finishing all Genre pages
 
 ## Number of Commits since last  sprint review
-- 50 Commits
+- 51 Commits
