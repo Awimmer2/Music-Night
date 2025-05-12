@@ -34,6 +34,29 @@ body{
     font-size: medium;
 }
 
+/* Info */
+ .info {
+    background-color: black;
+    height: 400px;
+    color: white;
+ }
+
+ .info {
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    align-items: flex-end;
+ }
+
+ #top-h, #songs-h, #weekly-h {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    text-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    font-weight: bolder;
+ }
+
 /* Song Table */
 
 .songs-list {
