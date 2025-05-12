@@ -81,7 +81,8 @@ body{
   }
   
   tbody td {
-    background-color: #d4d3d6;
+    background-color: #2c2b2e;
+    color: white;
     padding: 15px 20px;
     text-align: center;
   }
@@ -235,6 +236,12 @@ body.light-mode .songs-list{
     background-color: white;
     color: black;
 }
+
+body.light-mode tbody td {
+    background-color: #dcdcdc;
+    color: black;
+}
+  
   
 /* FOOTER */
  
