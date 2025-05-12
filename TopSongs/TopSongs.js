@@ -1,24 +1,48 @@
 const playlistUrl = "https://v1.nocodeapi.com/ioiaudrey/spotify/bFfHCYXvrMUQEIYy/playlists?id=37i9dQZEVXbMDoHDwVN2tF";
+const tracksUrlBase = "https://v1.nocodeapi.com/ioiaudrey/spotify/bFfHCYXvrMUQEIYy/tracks?ids=";
 
 async function fetchPlaylist() {
     try {
         const response = await fetch(playlistUrl);
         const data = await response.json();
-        displayTracks(data.tracks.items);
+        const tracks = data.tracks.items.slice(0, 20);
+
+        const trackIds = tracks.map(item => item.track.id).join(",");
+        const trackDetails = await fetch(`${tracksUrlBase}${trackIds}`);
+        const detailsData = await trackDetails.json();
+
+        displayTracks(tracks, detailsData.tracks);
     } catch (error) {
-        console.error("Error fetching playlist:", error);
+        console.error("Error fetching playlist or track details:", error);
     }
 }
 
-function displayTracks(tracks) {
+function displayTracks(playlistTracks, detailedTracks) {
     const tbody = document.querySelector("tbody");
     tbody.innerHTML = "";
 
-    tracks.slice(0, 20).forEach((item, index) => {
+    playlistTracks.forEach((item, index) => {
         const track = item.track;
+        const detail = detailedTracks.find(t => t.id === track.id);
+
         const name = track.name;
         const artist = track.artists.map(a => a.name).join(", ");
         const albumImage = track.album.images[0].url;
+
+        const popularity = detail ? detail.popularity : "–";
+
+        // Release date to DD.MM.YYYY
+        let releaseDate = "–";
+        if (detail && detail.album.release_date) {
+            const parts = detail.album.release_date.split("-");
+            if (parts.length === 3) {
+                releaseDate = `${parts[2]}.${parts[1]}.${parts[0]}`;
+            } else if (parts.length === 2) {
+                releaseDate = `01.${parts[1]}.${parts[0]}`;
+            } else if (parts.length === 1) {
+                releaseDate = `01.01.${parts[0]}`;
+            }
+        }
 
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -30,8 +54,8 @@ function displayTracks(tracks) {
               <h3 style="font-size: 35px;">${name}</h3> 
               <span>${artist}</span>
             </td>
-            <td style="font-family: fantasy; font-size: 35px;">–</td>
-            <td style="font-family: fantasy; font-size: 35px;">–</td>
+            <td class="popularity" style="font-family: fantasy; font-size: 35px;">${popularity}</td>
+            <td class="release-date" style="font-family: fantasy; font-size: 35px;">${releaseDate}</td>
         `;
         tbody.appendChild(row);
     });
