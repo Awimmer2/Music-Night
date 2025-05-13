@@ -43,7 +43,18 @@ retakeBtn.addEventListener('click', () => {
 
 function showResult() {
   const formData = new FormData(form);
-  const scores = { rock: 0, pop: 0, jazz: 0, hiphop: 0 };
+
+  const scores = {
+    pop: 0,
+    hiphop: 0,
+    rock: 0,
+    rnb: 0,         // Use 'rnb' as key for 'r&b' (HTML doesn't allow & in values)
+    classical: 0,
+    metal: 0,
+    country: 0,
+    jazz: 0,
+    latin: 0
+  };
 
   for (let value of formData.values()) {
     if (scores[value] !== undefined) {
@@ -61,7 +72,10 @@ function showResult() {
     }
   }
 
-  resultDiv.textContent = `Your genre is: ${topGenre.toUpperCase()}`;
+  // Optional: format 'rnb' as 'R&B' in the result
+  const displayName = topGenre === 'rnb' ? 'R&B' : topGenre.toUpperCase();
+
+  resultDiv.textContent = `Your genre is: ${displayName}`;
   resultContainer.style.display = 'flex';
   nextBtn.style.display = 'none';
 }
