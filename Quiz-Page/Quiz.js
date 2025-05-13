@@ -1,6 +1,7 @@
 const questions = document.querySelectorAll('.question');
 const nextBtn = document.getElementById('next-btn');
 const resultDiv = document.getElementById('result');
+const resultContainer = document.querySelector('.quiz-result');
 const retakeBtn = document.getElementById('retake-btn');
 const form = document.getElementById('quiz-form');
 
@@ -32,12 +33,12 @@ nextBtn.addEventListener('click', () => {
 retakeBtn.addEventListener('click', () => {
   // Reset everything
   form.reset();
-  resultDiv.style.display = 'none';
-  retakeBtn.style.display = 'none';
+  resultContainer.style.display = 'none';
   currentQuestion = 0;
   questions.forEach((q, i) => {
     q.style.display = i === 0 ? 'block' : 'none';
   });
+  nextBtn.style.display = 'inline-block'; // Show the "Next" button again
 });
 
 function showResult() {
@@ -60,8 +61,7 @@ function showResult() {
     }
   }
 
-  resultDiv.textContent = `Your top genre is: ${topGenre.toUpperCase()}`;
-  resultDiv.style.display = 'block';
-  retakeBtn.style.display = 'inline-block';
-  nextBtn.style.display = 'none'; // 👈 This line hides the Next button
+  resultDiv.textContent = `Your genre is: ${topGenre.toUpperCase()}`;
+  resultContainer.style.display = 'flex';
+  nextBtn.style.display = 'none';
 }

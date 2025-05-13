@@ -39,7 +39,7 @@
     
     <section class="quiz">
         <div class="quiz-container">
-        <h1>Find Your Genre</h1>
+        <h1 id="FindGenre">Find Your Genre</h1>
         <form id="quiz-form">
                 <div class="question" id="question-0">
                     <p>1. What mood do you enjoy most in music?</p>
@@ -68,8 +68,10 @@
                 <button type="button" id="next-btn">Next</button>
             </form>
 
-            <div id="result" style="display: none;"></div>
-            <button id="retake-btn" style="display: none;">Retake Quiz</button>
+            <div class="quiz-result" style="display: none;">
+                <div id="result">Your genre is ...</div>
+                <button id="retake-btn">Retake Quiz</button>
+            </div>
         </div>
     </section>
 
