@@ -1,4 +1,4 @@
-/*const questions = document.querySelectorAll('.question');
+const questions = document.querySelectorAll('.question');
 const nextBtn = document.getElementById('next-btn');
 const resultDiv = document.getElementById('result');
 const retakeBtn = document.getElementById('retake-btn');
@@ -65,4 +65,3 @@ function showResult() {
   retakeBtn.style.display = 'inline-block';
   nextBtn.style.display = 'none'; // 👈 This line hides the Next button
 }
-  */
