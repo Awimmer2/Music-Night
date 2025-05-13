@@ -36,40 +36,42 @@
         </div>
       </div>
     </nav>
-    <div class="quiz-container">
-        <h1>What Music Genre Matches You?</h1>
     
+    <section class="quiz">
+        <div class="quiz-container">
+        <h1>Find Your Genre</h1>
         <form id="quiz-form">
-            <div class="question" id="question-0">
-                <p>1. What mood do you enjoy most in music?</p>
-                <label><input type="radio" name="q0" value="rock"> Energetic & rebellious</label>
-                <label><input type="radio" name="q0" value="pop"> Upbeat & catchy</label>
-                <label><input type="radio" name="q0" value="jazz"> Relaxed & smooth</label>
-                <label><input type="radio" name="q0" value="hiphop"> Rhythmic & bold</label>
-            </div>
+                <div class="question" id="question-0">
+                    <p>1. What mood do you enjoy most in music?</p>
+                    <label><input type="radio" name="q0" value="rock"> Energetic & rebellious</label>
+                    <label><input type="radio" name="q0" value="pop"> Upbeat & catchy</label>
+                    <label><input type="radio" name="q0" value="jazz"> Relaxed & smooth</label>
+                    <label><input type="radio" name="q0" value="hiphop"> Rhythmic & bold</label>
+                </div>
 
-            <div class="question" id="question-1" style="display: none;">
-                <p>2. Which instrument stands out to you most?</p>
-                <label><input type="radio" name="q1" value="rock"> Electric guitar</label>
-                <label><input type="radio" name="q1" value="pop"> Synthesizer</label>
-                <label><input type="radio" name="q1" value="jazz"> Saxophone</label>
-                <label><input type="radio" name="q1" value="hiphop"> Drum machine</label>
-            </div>
+                <div class="question" id="question-1" style="display: none;">
+                    <p>2. Which instrument stands out to you most?</p>
+                    <label><input type="radio" name="q1" value="rock"> Electric guitar</label>
+                    <label><input type="radio" name="q1" value="pop"> Synthesizer</label>
+                    <label><input type="radio" name="q1" value="jazz"> Saxophone</label>
+                    <label><input type="radio" name="q1" value="hiphop"> Drum machine</label>
+                </div>
 
-            <div class="question" id="question-2" style="display: none;">
-                <p>3. Pick a favorite time to listen to music:</p>
-                <label><input type="radio" name="q2" value="rock"> At concerts</label>
-                <label><input type="radio" name="q2" value="pop"> Driving or shopping</label>
-                <label><input type="radio" name="q2" value="jazz"> Evening chill time</label>
-                <label><input type="radio" name="q2" value="hiphop"> Parties or workouts</label>
-            </div>
+                <div class="question" id="question-2" style="display: none;">
+                    <p>3. Pick a favorite time to listen to music:</p>
+                    <label><input type="radio" name="q2" value="rock"> At concerts</label>
+                    <label><input type="radio" name="q2" value="pop"> Driving or shopping</label>
+                    <label><input type="radio" name="q2" value="jazz"> Evening chill time</label>
+                    <label><input type="radio" name="q2" value="hiphop"> Parties or workouts</label>
+                </div>
 
-            <button type="button" id="next-btn">Next</button>
-        </form>
+                <button type="button" id="next-btn">Next</button>
+            </form>
 
-        <div id="result" style="display: none;"></div>
-        <button id="retake-btn" style="display: none;">Retake Quiz</button>
-    </div>
+            <div id="result" style="display: none;"></div>
+            <button id="retake-btn" style="display: none;">Retake Quiz</button>
+        </div>
+    </section>
 
     <footer>
       <div class="footerContainer">
