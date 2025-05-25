@@ -4,11 +4,11 @@ const resultDiv = document.getElementById('result');
 const resultContainer = document.querySelector('.quiz-result');
 const retakeBtn = document.getElementById('retake-btn');
 const form = document.getElementById('quiz-form');
+const playlistContainer = document.getElementById('playlist-container');
 
 let currentQuestion = 0;
 
 nextBtn.addEventListener('click', () => {
-  // Ensure an answer is selected
   const currentInputs = questions[currentQuestion].querySelectorAll('input');
   const answered = [...currentInputs].some(input => input.checked);
 
@@ -17,38 +17,35 @@ nextBtn.addEventListener('click', () => {
     return;
   }
 
-  // Hide current question
   questions[currentQuestion].style.display = 'none';
   currentQuestion++;
 
   if (currentQuestion < questions.length) {
-    // Show next question
     questions[currentQuestion].style.display = 'block';
   } else {
-    // Quiz finished — calculate result
     showResult();
   }
 });
 
 retakeBtn.addEventListener('click', () => {
-  // Reset everything
   form.reset();
   resultContainer.style.display = 'none';
+  playlistContainer.innerHTML = ''; // Clear playlist
+  playlistContainer.style.display = 'none'; // Hide playlist
   currentQuestion = 0;
   questions.forEach((q, i) => {
     q.style.display = i === 0 ? 'block' : 'none';
   });
-  nextBtn.style.display = 'inline-block'; // Show the "Next" button again
+  nextBtn.style.display = 'inline-block';
 });
 
 function showResult() {
   const formData = new FormData(form);
-
   const scores = {
     pop: 0,
     hiphop: 0,
     rock: 0,
-    rnb: 0,         // Use 'rnb' as key for 'r&b' (HTML doesn't allow & in values)
+    rnb: 0,
     classical: 0,
     metal: 0,
     country: 0,
@@ -62,7 +59,6 @@ function showResult() {
     }
   }
 
-  // Find top genre
   let topGenre = null;
   let topScore = 0;
   for (let genre in scores) {
@@ -72,10 +68,43 @@ function showResult() {
     }
   }
 
-  // Optional: format 'rnb' as 'R&B' in the result
   const displayName = topGenre === 'rnb' ? 'R&B' : topGenre.toUpperCase();
-
   resultDiv.textContent = `Your genre is: ${displayName}`;
   resultContainer.style.display = 'flex';
   nextBtn.style.display = 'none';
+
+  fetchPlaylist(topGenre);
+}
+
+function fetchPlaylist(genre) {
+  const API_URL = `https://v1.nocodeapi.com/audiwtvr/spotify/YuebOBqnEKVGhfYO/search?q=${genre}&type=playlist&limit=10`; // replace YOUR_USERNAME
+
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(data => {
+      const playlists = data.playlists?.items || [];
+      if (playlists.length === 0) {
+        playlistContainer.innerHTML = "<p>No playlists found.</p>";
+        playlistContainer.style.display = 'block';
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * playlists.length);
+      const playlist = playlists[randomIndex];
+
+      playlistContainer.innerHTML = `
+        <div class="playlist">
+          <a href="${playlist.external_urls.spotify}" target="_blank">
+            <img src="${playlist.images[0]?.url || ''}" alt="${playlist.name}" />
+            <p>${playlist.name}</p>
+          </a>
+        </div>
+      `;
+      playlistContainer.style.display = 'block';
+    })
+    .catch(err => {
+      console.error('Error fetching playlist:', err);
+      playlistContainer.innerHTML = "<p>Error loading playlist.</p>";
+      playlistContainer.style.display = 'block';
+    });
 }
