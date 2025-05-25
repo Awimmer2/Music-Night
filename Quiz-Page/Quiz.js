@@ -4,7 +4,8 @@ const resultDiv = document.getElementById('result');
 const resultContainer = document.querySelector('.quiz-result');
 const retakeBtn = document.getElementById('retake-btn');
 const form = document.getElementById('quiz-form');
-const playlistContainer = document.getElementById('playlist-container');
+const recommendationSection = document.getElementById('recommendation-section');
+const recommendationContainer = document.getElementById('recommendation-container');
 
 let currentQuestion = 0;
 
@@ -30,8 +31,8 @@ nextBtn.addEventListener('click', () => {
 retakeBtn.addEventListener('click', () => {
   form.reset();
   resultContainer.style.display = 'none';
-  playlistContainer.innerHTML = ''; // Clear playlist
-  playlistContainer.style.display = 'none'; // Hide playlist
+  recommendationSection.style.display = 'none';
+  recommendationContainer.innerHTML = '';
   currentQuestion = 0;
   questions.forEach((q, i) => {
     q.style.display = i === 0 ? 'block' : 'none';
@@ -73,38 +74,55 @@ function showResult() {
   resultContainer.style.display = 'flex';
   nextBtn.style.display = 'none';
 
-  fetchPlaylist(topGenre);
+  fetchPlaylistsForGenre(topGenre);
 }
 
-function fetchPlaylist(genre) {
-  const API_URL = `https://v1.nocodeapi.com/audiwtvr/spotify/YuebOBqnEKVGhfYO/search?q=${genre}&type=playlist&limit=10`; // replace YOUR_USERNAME
+function fetchPlaylistsForGenre(genre) {
+  const API_URL = `https://v1.nocodeapi.com/audiwtvr/spotify/YuebOBqnEKVGhfYO/search?q=${genre}&type=playlist&limit=10`;
 
   fetch(API_URL)
     .then(res => res.json())
     .then(data => {
       const playlists = data.playlists?.items || [];
+
       if (playlists.length === 0) {
-        playlistContainer.innerHTML = "<p>No playlists found.</p>";
-        playlistContainer.style.display = 'block';
+        recommendationSection.style.display = 'block';
+        recommendationContainer.innerHTML = "<p>No playlists found.</p>";
         return;
       }
 
-      const randomIndex = Math.floor(Math.random() * playlists.length);
-      const playlist = playlists[randomIndex];
+      const selectedPlaylists = [];
+      const usedIndexes = new Set();
+      while (selectedPlaylists.length < 3 && usedIndexes.size < playlists.length) {
+        const i = Math.floor(Math.random() * playlists.length);
+        if (!usedIndexes.has(i)) {
+          selectedPlaylists.push(playlists[i]);
+          usedIndexes.add(i);
+        }
+      }
 
-      playlistContainer.innerHTML = `
-        <div class="playlist">
-          <a href="${playlist.external_urls.spotify}" target="_blank">
-            <img src="${playlist.images[0]?.url || ''}" alt="${playlist.name}" />
-            <p>${playlist.name}</p>
+      recommendationContainer.innerHTML = '';
+      selectedPlaylists.forEach(playlist => {
+        const card = document.createElement('div');
+        card.style.width = "200px";
+        card.style.textAlign = "center";
+
+        card.innerHTML = `
+          <img src="${playlist.images[0]?.url || ''}" alt="Playlist Cover" style="width: 100%; border-radius: 10px;">
+          <h3 style="font-size: 18px; margin: 10px 0;">${playlist.name}</h3>
+          <a href="${playlist.external_urls.spotify}" target="_blank" style="text-decoration: none; color: #1DB954; font-weight: bold;">
+            Listen on Spotify
           </a>
-        </div>
-      `;
-      playlistContainer.style.display = 'block';
+        `;
+
+        recommendationContainer.appendChild(card);
+      });
+
+      recommendationSection.style.display = 'block';
     })
     .catch(err => {
-      console.error('Error fetching playlist:', err);
-      playlistContainer.innerHTML = "<p>Error loading playlist.</p>";
-      playlistContainer.style.display = 'block';
+      console.error('Error fetching playlists:', err);
+      recommendationContainer.innerHTML = "<p>Error loading recommendations.</p>";
+      recommendationSection.style.display = 'block';
     });
 }

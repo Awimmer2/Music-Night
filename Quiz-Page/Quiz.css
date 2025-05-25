@@ -1,4 +1,4 @@
-body, html{
+html, body{
     background-color: black;
     margin: 0;
     padding: 0;
@@ -150,6 +150,7 @@ body, html{
 #retake-btn:hover {
     background-color: #216b76;
 }
+
 
 /*Footer*/
 
@@ -314,16 +315,3 @@ body.light-mode .footerBottom p{
  * {
     transition: background-color 0.8s ease, color 0.8s ease;
 }
-
-.playlist-recommendation {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  .playlist img {
-    width: 200px;
-    border-radius: 10px;
-  }
-  .playlist p {
-    font-weight: bold;
-    margin-top: 0.5rem;
-  }
