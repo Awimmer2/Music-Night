@@ -151,6 +151,28 @@ html, body{
     background-color: #216b76;
 }
 
+/* RECOMMENDATION */
+
+#recommendation-section{
+    height: 500px;
+    display: block;
+    color: white;
+    background-color: black;
+    padding: 50px;
+}
+
+#recommendation-section h2 {
+    background-color: black;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+#recommendation-container {
+    padding: 50px;
+}
 
 /*Footer*/
 
