@@ -1,5 +1,7 @@
-body{
+body, html{
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar{
@@ -38,16 +40,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
     font-family: 'Montserrat', sans-serif; 
     background-color: black;
-    height: 700px;
+    height: 470px;
 }
 
 .quiz-container {
+
     max-width: 800px;
     width: 80%;
-    margin: auto;
     background: #2c2b2e;
     padding: 25px;
     border-radius: 8px;
@@ -59,10 +60,14 @@ body{
     color: white;
 }
 
-#FindGenre {
+.quiz-header h1 {
+    margin-bottom: 0;
+    background-color: black;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: bold;
+    color: white;
+    background-color: black;
 }
 
 .question {
