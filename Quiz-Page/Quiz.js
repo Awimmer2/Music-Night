@@ -70,7 +70,7 @@ function showResult() {
   }
 
   const displayName = topGenre === 'rnb' ? 'R&B' : topGenre.toUpperCase();
-  resultDiv.textContent = `Your genre is: ${displayName}`;
+  resultDiv.textContent = `YOUR GENRE IS: ${displayName}`;
   resultContainer.style.display = 'flex';
   nextBtn.style.display = 'none';
 

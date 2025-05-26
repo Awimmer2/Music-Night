@@ -1,22 +1,17 @@
 # PROGRESS SINCE LAST SPRINT REVIEW
 
 ## What has been done since last time?
-- Used Spotify API for the Top Songs Weekly Chart
-- Created a home page
-- Fixed dark-mode light-mode button
-- Created a website footer
-- A lot of styling for home page & genre page
+- Created a questionnaire, to find the user's genre based on their answers
+- After completeing the questionnaire, they get 3 random playlists on spotify that fit to that genre
 
 ## Problems
-- JSON file runs, but has bugs. 
-- Spotify API used in Top Songs Weekly page loads the table slowly
+- We wanted to give 1 playlist and shows maximum of 10 songs on it, however the chart did not work, so we did the 3 random playlists instead.
 
 ## Plans
-- Genre Quiz (explained more later)
-- Make a recommender based on the genre they get from the genre quiz
 - About Page (about the website)
 - Team Page (about team)
 - Finishing all Genre pages
 
 ## Number of Commits since last  sprint review
-- 51 Commits
+- Audrey: 20 Commits
+- Behrang: 0 Commits
