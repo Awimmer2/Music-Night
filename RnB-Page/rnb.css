@@ -144,7 +144,18 @@ body.light-mode .navbar .nav-link {
 body.light-mode .navbar .nav-link:hover {
     color: black;
 }
-  
+/*CARD*/
+  .card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.rcard:hover {
+  color: #9c40ff;
+}
+
+
+
 /* FOOTER */
  
 body.light-mode footer{
